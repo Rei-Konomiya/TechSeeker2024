@@ -25,11 +25,13 @@
 #define MOTOR
 #define UNDEFINED     // 排出機構
 
+// インスタンス作成
+Gear gear(GEAR_PIN, GEAR_OFF, GEAR_ON, GEAR_LOW, GEAR_MEDIUM, GEAR_HIGH);
 
 void setup() {
-  Gear gear(GEAR_PIN, GEAR_OFF, GEAR_ON, GEAR_LOW, GEAR_MEDIUM, GEAR_HIGH);
+  gear.start();
 }
 
 void loop() {
-
+  int mode = gear.get();
 }

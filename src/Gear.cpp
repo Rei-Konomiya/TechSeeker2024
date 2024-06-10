@@ -17,8 +17,12 @@ public:
    * @param high   強 のしきい値
    */
   Gear(int pin, float off, float drive, float low, float medium, float high)
-  :off(off), drive(drive), low(low), medium(medium), high(high)
-  { pinMode(pin, ANALOG); }
+  :off(off), drive(drive), low(low), medium(medium), high(high) {}
+
+  /** @fn
+   * @brief pinModeの設定、setup関数内で呼び出す
+   */
+  void start(){ pinMode(pin, ANALOG); }
 
   int get(){
     int param = 0;
