@@ -30,10 +30,10 @@ public:
   }
 
 private:
-  int pin;
-  float off;
-  float drive;
-  float low;
-  float medium;
-  float high;
+  int pin;      // アナログ入力ピン番号
+  float off;    // off時のしきい値、0と予想
+  float drive;  // drive時のしきい値
+  float low;    // low時のしきい値
+  float medium; // medium時のしきい値
+  float high;   // high時のしきい値
 };
